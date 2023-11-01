@@ -1,14 +1,16 @@
 
 import { useState , useEffect} from "react";
 import styles from './App.module.css'
+import StarWars from "./StarWars";
+
 function App() {
   const [numbers,setNumbers] = useState([1,2,3,4,5])
   const [count, setCount] = useState(0)
   useEffect(()=>{
-    console.log('mount commponnet');
+  //  console.log('mount commponnet');
   },[])
   useEffect(()=>{
-console.log(`update ${count}`);
+//console.log(`update ${count}`);
   },[numbers,count])
 
 
@@ -26,6 +28,7 @@ console.log(`update ${count}`);
  
   return (
     <div>
+      <StarWars/>
       <h3>Count:{count}</h3>
        <ul>
           {numbers.map((number,index) => (
